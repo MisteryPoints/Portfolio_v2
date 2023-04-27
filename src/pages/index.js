@@ -24,11 +24,13 @@ export default function Home() {
                 src={HeroDay}
                 alt="DevPoint"
                 className="w-full h-auto max-w-[450px] "
+                priority={true}
               />
               <Image
                 src={HeroNight}
                 alt="DevPoint"
                 className="w-full h-auto max-w-[400px] max-h-[620px] hidden"
+                priority={true}
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -71,7 +73,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-0 bottom-12 inline-block w-60">
+        <div className="fixed right-0 bottom-12 inline-block w-40 xl:w-42 2xl:w-60">
           <Image
             src={Profile}
             alt={"DevPoint Digital Art"}

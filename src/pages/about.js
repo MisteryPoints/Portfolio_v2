@@ -13,7 +13,7 @@ const about = () => {
         <meta name="about" content="About Page" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <Layout className="pt-16">
+        <Layout className="pb-20">
           <AnimatedText text="Sky is not yet the limit!" className="mb-12" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
