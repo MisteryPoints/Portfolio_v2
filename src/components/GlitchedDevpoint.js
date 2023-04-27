@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Power4, Sine, gsap } from "gsap";
 import Link from "next/link";
 
-const GlitchedDevpoint = ({ children }) => {
+const GlitchedDevpoint = () => {
   let image_1 = useRef(null);
   let image_2 = useRef(null);
   let image_3 = useRef(null);
@@ -138,7 +138,7 @@ const GlitchedDevpoint = ({ children }) => {
       },
       "-=.2"
     );
-  });
+  }, [timeline]);
 
   return (
     <div className="text-[#000000] underline underline-offset-2 block">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "./Layout";
 import GlitchedDevpoint from "./GlitchedDevpoint";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -10,8 +10,16 @@ const Footer = () => {
         <span className="select-none">
           {new Date().getFullYear()} &copy; All Rights Reserved.
         </span>
-        <div className="text-center flex -left-20 relative items-top text-2xl">
-          Build With 💌 by&nbsp;
+        <div className="text-center flex -left-20 relative items-top text-2xl select-none">
+          Build With{" "}
+          <motion.p
+            whileHover={{ y: [-5, -10, -5, 0] }}
+            transition={{ duration: 1, repeat: Infinity, repeatDelay: 1 }}
+            className="z-[100]"
+          >
+            💌
+          </motion.p>{" "}
+          by&nbsp;
           <GlitchedDevpoint />
         </div>
         <div className="group">
@@ -23,23 +31,26 @@ const Footer = () => {
             transition={{
               duration: 2,
               ease: "easeInOut",
-              times: [0, 0.2, 0.5, 0.8, 1], 
-              repeatDelay: 1
+              times: [0, 0.2, 0.5, 0.8, 1],
+              repeatDelay: 1,
             }}
           >
             Say Hello
-          </motion.a> 
-          <motion.p className='group inline fixed invisible group-hover:visible select-none'
-          initial={{}}
-          animate={{  
+          </motion.a>
+          <motion.p
+            className="group inline fixed invisible group-hover:visible select-none"
+            animate={{
               scale: 1,
-              rotate: [0, -90, 90, 0] 
-          }}
-          transition={{
-            duration: 2, 
-            repeat: Infinity,
-            repeatDelay: 1
-          }}>🖐🏼</motion.p> 
+              rotate: [-15, -22.5, -45, -22.5, 0, 22.5, 45, 22.5, 15, 0],
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatDelay: 0.2,
+            }}
+          >
+            🖐🏼
+          </motion.p>
         </div>
       </Layout>
     </footer>
