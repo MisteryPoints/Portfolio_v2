@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 import DevPointImg from "../../public/Devpoint-Profile.png";
 import Image from "next/image";
+import ImageFlip from "@/components/ImageFlip";
 
 const about = () => {
   return (
@@ -14,9 +15,12 @@ const about = () => {
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pb-20">
-          <AnimatedText text="Sky is not yet the limit!" className="mb-12" />
+          <AnimatedText
+            text="Sky is not yet the limit!"
+            className="mb-12 select-none"
+          />
           <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+            <div className="col-span-3 flex flex-col items-start justify-start select-none  ">
               <h2 className="mb-4 text-lg font-bold text-dark/75">Biography</h2>
               <p className="font-medium">
                 Hi, I am DevPoint a Freelancer and a Full-Stack Developer based
@@ -37,13 +41,9 @@ const about = () => {
 
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 max-w-[500px]">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark opacity-[95%]" />
-              <Image
-                src={DevPointImg}
-                alt="DevPoint"
-                className="w-full h-auto rounded-2xl"
-              />
+              <ImageFlip />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between">
+            <div className="col-span-2 flex flex-col items-end justify-between select-none">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">50+</span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
