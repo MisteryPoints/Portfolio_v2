@@ -31,13 +31,21 @@ const Experience = () => {
             work={"Worked on a team responsible on Avery analysis, Provisioning analysis, developing solutions for Claro Dom Provisioning System and Number Inventory Management, including the Phone Numbers Data analysis for availability, improving sales results by dealer and consultant locations."}
           />
           <Details
-            position={'Software Developer Intern'} 
+            position={'Software Developer'} 
             company={'Quickarr'} 
             companyLink={'https://zaubee.com/biz/quickarr-repuestos-y-servicios-automotriz-cu275oah'}
             time={'2017-2018'} 
             address={'Santo Domingo, DN'}
-            work={"Worked as a Principal Developer of the private Customer Billing System in the Automotive Business, selling and mantaining the Software with the SAAS model."}
+            work={"Worked as a Principal Developer of the private Customer Billing System in the Automotive Business, selling and mantaining the Software with the SaaS model."}
           />
+          <Details
+            position={'Software Developer (Freelancer)'} 
+            company={'DevPoint'} 
+            companyLink={'https://devpoint.vercel.app/'}
+            time={'2017-Present'} 
+            address={'Santo Domingo, DN'}
+            work={"Worked as a Freelance Developer, Design, build, test, and deploy software applications and features, selling them as a SaaS. Carry software products through the SDLC 'Software Development Life Cycle', Troubleshoot and debug software, Work with business analysts to define software requirements."}
+          /> 
           <Details
             position={'IT Manager Intern'} 
             company={'Rowe Labs'} 
