@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
-import DevPointImg from "../../public/Devpoint-Profile.png";
-import DevPointBack from "../../public/Devpoint-Me.png";
+import DevPointBack from "../../public/Devpoint-Profile.png";
+import DevPointImg from "../../public/Devpoint-Me.png";
 
 const flipAnimation = {
   notFlipped: {
