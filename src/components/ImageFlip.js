@@ -41,18 +41,20 @@ const ImageFlip = () => {
       animate={isDuration ? "flipped" : "notFlipped"}
       onClick={() => changeFlip(!isFlipped)}
     >
-      <div className="inset-0 w-full h-full bg-sky-200/75 rounded-lg shadow-sm transform ">
+      <div className="inset-0 w-full h-full bg-sky-200/50 rounded-lg shadow-sm transform ">
         <Image
           src={DevPointImg}
           alt="Front Image"
-          className="w-full h-full object-cover rounded-lg transition-all duration-300 transform-gpu backface-hidden"
+          className={`w-full h-full object-cover rounded-lg transition-all duration-300 transform-gpu `}
+          priority={true}
         />
         <Image
           src={DevPointBack}
           alt="Back Image"
-          className={`w-full h-full object-cover rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 ${
+          className={`w-full h-full object-cover bg-sky-100 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 backface-hidden ${
             isFlipped ? "" : "hidden"
           }`}
+          priority={true}
         />
       </div>
     </motion.div>

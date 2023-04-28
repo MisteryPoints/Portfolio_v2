@@ -41,12 +41,11 @@ const Footer = () => {
             className="group inline fixed invisible group-hover:visible select-none"
             animate={{
               scale: 1,
-              rotate: [-15, -22.5, -45, -22.5, 0, 22.5, 45, 22.5, 15, 0],
+              rotate: [-15, -22.5, -30, -22.5, 0, 22.5, 30, 22.5, 15, 0],
             }}
             transition={{
               duration: 1,
-              repeat: Infinity,
-              repeatDelay: 0.2,
+              repeat: Infinity, 
             }}
           >
             🖐🏼
