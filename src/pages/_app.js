@@ -11,9 +11,7 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main
-      className={`font-mont bg-light w-full min-h-screen`}
-    >
+    <main className={`font-mont bg-light w-full min-h-screen`}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

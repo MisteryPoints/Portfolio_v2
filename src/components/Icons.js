@@ -1,8 +1,8 @@
 const TwitterIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2rem"
-    height="2rem"
+    width={800}
+    height={800}
     viewBox="0 0 256 209"
     className={` ${className}`}
     {...rest}
@@ -52,8 +52,8 @@ const ExternalLinkIcon = ({ className, ...rest }) => (
 const LinkedinIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2rem"
-    height="2rem"
+    width={800}
+    height={800}
     viewBox="0 0 256 256"
     className={` ${className}`}
     {...rest}
@@ -73,8 +73,8 @@ const LinkedinIcon = ({ className, ...rest }) => (
 const GithubIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2rem"
-    height="2rem"
+    width={800}
+    height={800}
     viewBox="0 0 512 512"
     className={` ${className}`}
     {...rest}
@@ -240,8 +240,8 @@ const MiscIcon = ({ className, ...rest }) => (
 const DayIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
+    width={800}
+    height={800}
     viewBox="0 0 24 24"
     className={` ${className}`}
     {...rest}
@@ -346,8 +346,8 @@ const DayIcon = ({ className, ...rest }) => (
 const NightIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
+    width={800}
+    height={800}
     viewBox="0 0 24 24"
     className={` ${className}`}
     {...rest}

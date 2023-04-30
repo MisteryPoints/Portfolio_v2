@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import DevPointImg from "../../public/Devpoint-Profile.png";
 import DevPointBack from "../../public/Devpoint-Me.png";
 
-const flipAnimation = { 
+const flipAnimation = {
   notFlipped: {
     rotateY: 0,
     transition: {
@@ -51,7 +51,7 @@ const ImageFlip = () => {
         <Image
           src={DevPointBack}
           alt="Back Image"
-          className={`w-full h-full object-cover bg-sky-100 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 backface-hidden ${
+          className={`w-full h-full object-cover bg-sky-100 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 ${
             isFlipped ? "" : "hidden"
           }`}
           priority={true}
