@@ -6,6 +6,7 @@ import ImageFlip from "@/components/ImageFlip";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -41,7 +42,7 @@ const about = () => {
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pb-20">
           <AnimatedText
-            text="Sky is not yet the limit!"
+            text="Unleashing the boundless potential of technology!"
             className="mb-12 select-none"
           />
           <div className="grid w-full grid-cols-8 gap-16">
@@ -100,6 +101,7 @@ const about = () => {
           </div>
           <Skills />
           <Experience />
+          <Education />
         </Layout>
       </main>
     </>

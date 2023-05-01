@@ -3,12 +3,8 @@ import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  TwitterIcon,
-  CircularText,
-  ExternalLinkIcon,
   LinkedinIcon,
   GithubIcon,
-  MiscIcon,
   DayIcon,
   NightIcon,
   WhatsappIcon,
@@ -16,6 +12,7 @@ import {
   InstagramIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const { asPath } = useRouter();
@@ -35,6 +32,8 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="w-full px-28 pt-4 pb-20 h-8 bg-light font-medium flex justify-between">
       <nav className="items-center">
@@ -92,6 +91,13 @@ const NavBar = () => {
         >
           <GithubIcon className="h-[30px] w-[30px] text-center" />
         </motion.a>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+          {mode === "dark" ? (
+            <DayIcon className={"fill-dark h-[30px] w-[30px]"} />
+          ) : (
+            <NightIcon className={"fill-dark h-[30px] w-[30px]"} />
+          )}
+        </button>
       </nav>
       <div className="absolute left-[50%] top-0 translate-x-[-50%]">
         <Logo />
