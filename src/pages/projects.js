@@ -109,7 +109,7 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>DevPoint | About </title>
+        <title>DevPoint | Projects </title>
         <meta name="about" content="About Page" />
       </Head>
       <main className="w-full pb-24 bg-light flex flex-col items-center justify-center dark:bg-dark">

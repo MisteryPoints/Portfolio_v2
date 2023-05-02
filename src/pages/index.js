@@ -21,8 +21,8 @@ export default function Home() {
       </Head>
       <div className="flex items-center text-dark w-full pb-16 dark:text-light">
         <Layout>
-          <div className="flex items-center justify-between w-full gap-10">
-            <div className="w-1/2 flex justify-center items-end">
+          <div className="flex items-center justify-between w-full gap-10 lg:flex-col">
+            <div className="w-1/2 flex justify-center items-end lg:w-full">
               <FramerImage
                 src={HeroDay}
                 alt="DevPoint"
@@ -58,7 +58,7 @@ export default function Home() {
                 "
               />
             </div>
-            <div className="w-1/2 flex flex-col items-center self-center">
+            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:mb-12">
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Innovation."
                 className="select-none"
@@ -69,7 +69,7 @@ export default function Home() {
                 latest projects and articles, showcasting my expertise in
                 React.JS, React Native and Kotlin Web and Mobile Development.
               </p>
-              <div className="grid lg:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 items-center self-start mt-2 gap-2">
+              <div className="grid lg:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-3 items-center self-start mt-2 gap-2">
                 <Link
                   href="/VictorTejadaResume.pdf"
                   target={"_blank"}
@@ -81,7 +81,7 @@ export default function Home() {
                 <Link
                   href="/VictorTejadaCV.pdf"
                   target={"_blank"}
-                  className="flex items-center bg-blue-600 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-blue-600 border-2 border-solid border-transparent hover:border-blue-600 transition-all duration-200 justify-center w-fit dark:hover:bg-dark lg:ml-0 3xl:ml-4"
+                  className="flex items-center bg-blue-600 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-blue-600 border-2 border-solid border-transparent hover:border-blue-600 transition-all duration-200 justify-center w-fit dark:hover:bg-dark xl:ml-0 3xl:ml-4"
                   download={true}
                 >
                   CV Esp &nbsp; <ExternalLinkIcon />
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="fixed right-0 bottom-12 inline-block w-40 xl:w-42 2xl:w-60">
+        <div className="fixed right-0 bottom-12 inline-block 3xl:max-w-[250px] 2xl:max-w-[200px] xl:max-w-[150px] lg:hidden">
           <Image
             src={Profile}
             alt={"DevPoint Digital Art"}

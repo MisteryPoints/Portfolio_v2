@@ -107,7 +107,7 @@ const articles = () => {
   return (
     <>
       <Head>
-        <title>DevPoint | About </title>
+        <title>DevPoint | Articles </title>
         <meta name="about" content="About Page" />
       </Head>
       <main className="w-full pb-32 flex flex-col items-center justify-center overflow-hidden">
