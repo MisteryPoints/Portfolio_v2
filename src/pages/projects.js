@@ -14,8 +14,8 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between relative rounded-3xl border border-solid border-dark bg-light shadow-xl hover:shadow-2xl transition-all duration-200  mt-12">
-      <div className="absolute top-0 -right-[16px] -z-10 w-[101%] h-[102%] rounded-[40px] bg-dark" />
+    <article className="w-full flex items-center justify-between relative rounded-3xl border border-solid border-dark bg-light shadow-xl hover:shadow-2xl transition-all duration-200  mt-12 dark:border-light dark:bg-dark dark:text-light">
+      <div className="absolute top-0 -right-[16px] -z-10 w-[101%] h-[102%] rounded-[40px] bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
@@ -30,7 +30,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between p-12">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl dark: dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -38,7 +40,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         >
           <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-12">
             <GithubIcon className="w-[50px] h-[50px]" />
@@ -46,7 +48,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold border-2 border-dark hover:bg-light hover:text-dark"
+            className="ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold border-2 border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-white dark:hover:border-light"
           >
             Visit Project
           </Link>
@@ -58,8 +60,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-xl hover:shadow-2xl p-6 relative transition-all duration-200">
-      <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-dark" />
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-xl hover:shadow-2xl p-6 relative transition-all duration-200 dark:border-light dark:bg-dark dark:text-light">
+      <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-dark dark:bg-light" />
       <Link href={link} target="_blank" className="w-full cursor-pointer">
         <FramerImage
           src={img}
@@ -70,7 +72,9 @@ const Project = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -82,7 +86,7 @@ const Project = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold border-2 border-dark hover:bg-light hover:text-dark"
+            className="rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold border-2 border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-white dark:hover:border-light"
           >
             Visit
           </Link>
@@ -102,7 +106,7 @@ const projects = () => {
         <title>DevPoint | About </title>
         <meta name="about" content="About Page" />
       </Head>
-      <main className="w-full pb-24 bg-light flex flex-col items-center justify-center">
+      <main className="w-full pb-24 bg-light flex flex-col items-center justify-center dark:bg-dark">
         <Layout className="pt-16">
           <AnimatedText text="Bringing ideas to life through innovation and impact." />
           <div className="grid grid-cols-12 gap-24 ">

@@ -17,6 +17,7 @@ const Skill = ({ name, x, y, color, href }) => {
     visible: {
       x: x,
       y: y,
+      transition: { duration: 1 },
     },
   };
 
@@ -24,12 +25,11 @@ const Skill = ({ name, x, y, color, href }) => {
     <motion.a
       ref={ref}
       href={href}
-      className={`flex items-center justify-center rounded-full font-semibold ${color} text-light py-3 px-6 shadow-dark hover:cursor-pointer absolute`}
-      whileHover={{ scale: 1.1, transition: { duration: 0.4 } }}
+      className={`flex items-center justify-center rounded-full font-semibold ${color} text-light py-3 px-6 shadow-gray-500 shadow-sm hover:cursor-pointer absolute border-2 border-solid border-transparent dark:border-light dark:hover:shadow-gray-500 dark:shadow-none`}
+      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
       initial={{ x: 0, y: 0 }}
       variants={variants}
       animate={animation}
-      transition={{ duration: 1.5 }}
       viewport={{ once: true }}
       target={"_blank"}
     >
@@ -41,12 +41,12 @@ const Skill = ({ name, x, y, color, href }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-56 mb-10 text-center w-full">
+      <h2 className="font-bold text-8xl mt-56 mb-10 text-center w-full dark:text-light">
         Skills
       </h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark">
         <motion.a
-          className="flex items-center justify-center rounded-full font-semibold bg-sky-900 text-light p-8 shadow-dark hover:cursor-pointer"
+          className="flex items-center justify-center rounded-full font-semibold bg-sky-900 text-light p-8 shadow-gray-500 shadow-sm hover:cursor-pointer border-2 border-solid border-transparent dark:border-light dark:shadow-light"
           whileHover={{ scale: 1.1 }}
           href="https://developer.mozilla.org/es/"
           target={"_blank"}
@@ -127,7 +127,7 @@ const Skills = () => {
           name="JavaScript"
           x="0vw"
           y="-46vh"
-          color="bg-yellow-300"
+          color="bg-yellow-400"
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         />
         <Skill

@@ -16,11 +16,13 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize font-medium text-dark/75">
+        <h3 className="capitalize font-bold text-2xl dark:text-light">
+          {type}
+        </h3>
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {time} | {place}
         </span>
-        <p className="font-medium w-full">{info}</p>
+        <p className="font-medium w-full dark:text-light">{info}</p>
       </motion.div>
     </li>
   );
@@ -35,11 +37,13 @@ const Education = () => {
 
   return (
     <div className="mt-32 mb-[350px]">
-      <h2 className="font-bold text-8xl w-full mb-32 text-center">Education</h2>
+      <h2 className="font-bold text-8xl w-full mb-32 text-center dark:text-light">
+        Education
+      </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top max-h-[550px]"
+          className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark shadow-md shadow-primary dark:shadow-primaryDark  max-h-[560px]"
         />
         <ul>
           <Details

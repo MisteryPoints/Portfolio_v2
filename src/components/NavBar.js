@@ -21,7 +21,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
+        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 dark:bg-light ${
           asPath === href ? "w-full" : "w-0"
         }`}
       >
@@ -35,7 +35,7 @@ const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <header className="w-full px-28 pt-4 pb-20 h-8 bg-light font-medium flex justify-between">
+    <header className="w-full px-28 pt-4 pb-20 h-8 font-medium flex justify-between dark:text-light">
       <nav className="items-center">
         <CustomLink href="/" title="Home" className="mr-2" />
         <CustomLink href="/about" title="About" className="mx-2" />
@@ -81,7 +81,7 @@ const NavBar = () => {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <LinkedinIcon className="h-[30px] w-[30px]" />
+          <LinkedinIcon className="h-[33px] w-[33px] rounded-lg" />
         </motion.a>
         <motion.a
           href="https://github.com/MisteryPoints"
@@ -89,13 +89,18 @@ const NavBar = () => {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <GithubIcon className="h-[30px] w-[30px] text-center" />
+          <GithubIcon className="h-[33px] w-[33px] text-center" />
         </motion.a>
-        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
-          {mode === "dark" ? (
-            <DayIcon className={"fill-dark h-[30px] w-[30px]"} />
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`ml-3 flex items-center justify-center rounded-full ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+        >
+          {mode !== "dark" ? (
+            <DayIcon className={"fill-dark h-[33px] w-[33px]"} />
           ) : (
-            <NightIcon className={"fill-dark h-[30px] w-[30px]"} />
+            <NightIcon className={"fill-dark h-[33px] w-[33px]"} />
           )}
         </button>
       </nav>

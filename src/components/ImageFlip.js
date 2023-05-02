@@ -51,7 +51,7 @@ const ImageFlip = () => {
         <Image
           src={DevPointBack}
           alt="Back Image"
-          className={`w-full h-full object-cover bg-sky-100 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 ${
+          className={`w-full h-full object-cover bg-sky-100 dark:bg-gray-400 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 ${
             isFlipped ? "" : "hidden"
           }`}
           priority={true}

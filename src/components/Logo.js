@@ -1,25 +1,39 @@
-import Link from 'next/link'
-import React from 'react'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import HeroNight from "../../public/DevIcon.png";
 
 const MotionLink = motion(Link);
+const FramerImage = motion(Image);
 
 const Logo = () => {
   return (
-    <div className='flex items-center justify-center mt-2'>
-      <MotionLink href='/' className='w-20 h-20 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold' whileHover={{
-        backgroundColor: ['#121212', 'rgba(131,58,180,1)', 'rgba(253,29,29,1)', 'rgba(252,176,69,1)', 'rgba(131,58,180,1)', '#121212'],
-        scale: [1, 0.8, 1.2, 0.8, 1],
-        rotate: [0, -90, 0, 90, 0],
-        borderRadius: ["100%", "50%", "30%", "50%", "100%"],
-        transition:{
-          duration: 2,
-          ease: "easeInOut",
-          times: [0, 0.2, 0.5, 0.8, 1],
-          repeat: Infinity }
-      }}>&lt;DP/&gt;</MotionLink>
-    </div>
-  )
-}
+    <Link href="/">
+      <FramerImage
+        src={HeroNight}
+        alt="DevPoint"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.4 },
+        }}
+        whileHover={{
+          scale: [1, 0.9, 1.1, 0.9, 1],
+          rotate: [0, -5, 0, 5, 0],
+          transition: {
+            duration: 3,
+            ease: "easeInOut",
+            times: [0, 0.2, 0.5, 0.8, 1],
+            repeat: Infinity,
+          },
+        }}
+        className="max-w-[100px] rounded-3xl "
+        priority={true}
+      />
+    </Link>
+  );
+};
 
-export default Logo
+export default Logo;

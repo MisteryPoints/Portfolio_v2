@@ -47,35 +47,37 @@ const about = () => {
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start select-none  ">
-              <h2 className="mb-4 text-lg font-bold text-dark/75">Biography</h2>
-              <p className="font-medium">
+              <h2 className="mb-4 text-lg font-bold text-dark/75 dark:text-light/75">
+                Biography
+              </h2>
+              <p className="font-medium dark:text-light">
                 Hi, I am DevPoint a Freelancer and a Full-Stack Developer based
                 in Santo Domingo, with a passion for building digital services,
                 solutions or something that I wish to have.
               </p>
-              <p className="font-medium my-4">
+              <p className="font-medium my-4 dark:text-light">
                 I have a pasion for making imposible and hard to develop ideas
                 into Reality!, I loves things like launching products, from
                 planning and designing all the way to solving real-life problems
                 with code.
               </p>
-              <p className="font-medium">
+              <p className="font-medium dark:text-light">
                 When not online, I love to hanging out with my wife, family and
                 my friends making memorable moments together.
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 max-w-[500px]">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark opacity-[95%]" />
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 max-w-[500px] dark:border-light dark:bg-dark">
+              <div className="absolute -top-[2px] -right-3 -z-10 w-[102.5%] h-[103%] rounded-[30px] bg-dark dark:bg-light opacity-[95%]" />
               <ImageFlip />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between select-none">
+            <div className="col-span-2 flex flex-col items-end justify-between select-none dark:text-light">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
                   {" "}
                   <AnimatedNumbers value={40} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   Satisfied Clients
                 </h2>
               </div>
@@ -84,7 +86,7 @@ const about = () => {
                   {" "}
                   <AnimatedNumbers value={25} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   Projects Completed
                 </h2>
               </div>
@@ -93,7 +95,7 @@ const about = () => {
                   {" "}
                   <AnimatedNumbers value={7} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   Years of Experience
                 </h2>
               </div>
