@@ -45,7 +45,7 @@ const MovingImage = ({ title, img, link }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-3xl shadow-md shadow-dark"
+        className="z-10 w-96 h-auto hidden absolute rounded-3xl shadow-md shadow-dark dark:shadow-light/20"
       />
     </Link>
   );
@@ -57,18 +57,20 @@ const Article = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 last:mb-0 border border-solid border-dark border-r-4 border-b-4"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 last:mb-0 border border-solid border-dark dark:text-light dark:bg-dark dark:border-light border-r-4 border-b-4"
     >
       <MovingImage title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary font-semibold pl-4 dark:text-primaryDark">
+        {date}
+      </span>
     </motion.li>
   );
 };
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 relative">
-      <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-dark" />
+    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 relative dark:bg-dark dark:border-light dark:text-light">
+      <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
@@ -80,6 +82,12 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
           className="w-full h-auto rounded-3xl"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw
+          "
         />
       </Link>
       <Link href={link} target="_blank">
@@ -88,7 +96,9 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         </h2>
       </Link>
       <p className="text-sm mb-2 select-none">{summary}</p>
-      <span className="text-primary font-semibold select-none">{time}</span>
+      <span className="text-primary font-semibold select-none dark:text-primaryDark">
+        {time}
+      </span>
     </li>
   );
 };
@@ -122,7 +132,7 @@ const articles = () => {
               link="https://devpoint-messenger.vercel.app/"
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center">
+          <h2 className="font-bold text-4xl w-full text-center dark:text-light">
             All Articles
           </h2>
           <ul className="py-16">

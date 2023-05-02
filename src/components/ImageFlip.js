@@ -46,7 +46,12 @@ const ImageFlip = () => {
           src={DevPointImg}
           alt="Front Image"
           className={`w-full h-full object-cover rounded-lg transition-all duration-300 transform-gpu `}
-          priority={true}
+          priority
+          sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw
+          "
         />
         <Image
           src={DevPointBack}
@@ -54,7 +59,12 @@ const ImageFlip = () => {
           className={`w-full h-full object-cover bg-sky-100 dark:bg-gray-400 rounded-lg transition-all duration-300 transform-gpu absolute top-0 left-0 ${
             isFlipped ? "" : "hidden"
           }`}
-          priority={true}
+          priority
+          sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw
+          "
         />
       </div>
     </motion.div>

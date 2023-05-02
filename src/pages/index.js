@@ -33,7 +33,12 @@ export default function Home() {
                   transition: { duration: 0.4 },
                 }}
                 className="w-full h-auto max-w-[450px] max-h-[550px] rounded-3xl dark:hidden"
-                priority={true}
+                priority
+                sizes="
+                  (max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw
+                "
               />
               <FramerImage
                 src={HeroNight}
@@ -45,7 +50,12 @@ export default function Home() {
                   transition: { duration: 0.4 },
                 }}
                 className="w-full h-auto max-w-[400px] max-h-[550px] rounded-3xl hidden dark:inline-block"
-                priority={true}
+                priority
+                sizes="
+                  (max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw
+                "
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -59,7 +69,7 @@ export default function Home() {
                 latest projects and articles, showcasting my expertise in
                 React.JS, React Native and Kotlin Web and Mobile Development.
               </p>
-              <div className="grid xl:grid-cols-2 2xl:grid-cols-3 items-center self-start mt-2 gap-2">
+              <div className="grid lg:grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 items-center self-start mt-2 gap-2">
                 <Link
                   href="/VictorTejadaResume.pdf"
                   target={"_blank"}
@@ -71,7 +81,7 @@ export default function Home() {
                 <Link
                   href="/VictorTejadaCV.pdf"
                   target={"_blank"}
-                  className="flex items-center bg-blue-600 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-blue-600 border-2 border-solid border-transparent hover:border-blue-600 transition-all duration-200 justify-center w-fit dark:hover:bg-dark"
+                  className="flex items-center bg-blue-600 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-blue-600 border-2 border-solid border-transparent hover:border-blue-600 transition-all duration-200 justify-center w-fit dark:hover:bg-dark lg:ml-0 3xl:ml-4"
                   download={true}
                 >
                   CV Esp &nbsp; <ExternalLinkIcon />
