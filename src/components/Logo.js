@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroNight from "../../public/DevIcon.png";
+import DevIcon from "../../public/DevIcon.png";
 
 const MotionLink = motion(Link);
 const FramerImage = motion(Image);
@@ -11,7 +11,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <FramerImage
-        src={HeroNight}
+        src={DevIcon}
         alt="DevPoint"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{

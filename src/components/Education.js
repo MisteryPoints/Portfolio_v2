@@ -36,14 +36,14 @@ const Education = () => {
   });
 
   return (
-    <div className="mt-32 3xl:mb-[150px] mb-[350px]">
+    <div className="mt-32 lg:mb-[150px] 3xl:mb-[350px]">
       <h2 className="font-bold text-8xl w-full mb-32 text-center dark:text-light">
         Education
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark shadow-md shadow-primary dark:shadow-primaryDark sm:max-h-[80%] 3xl:max-h-[75%]"
+          className="absolute lg:left-0 3xl:left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark shadow-md shadow-primary dark:shadow-primaryDark "
         />
         <ul>
           <Details

@@ -9,7 +9,7 @@ const LiICon = ({ reference }) => {
   });
 
   return (
-    <figure className="absolute left-0 stroke-dark dark:stroke-light">
+    <figure className="absolute lg:-left-9 3xl:left-0 stroke-dark dark:stroke-light">
       <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
         <circle
           cx="75"

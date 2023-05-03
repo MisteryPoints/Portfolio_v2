@@ -66,7 +66,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full px-28  pt-4 pb-20 h-8 font-medium flex justify-between dark:text-light relative">
+    <header className="w-full lg:px-12 3xl:px-28  pt-4 pb-20 h-8 font-medium flex justify-between dark:text-light relative">
       <button
         className="flex-col justify-center items-center h-6 hidden lg:flex"
         onClick={handleClick}
@@ -82,7 +82,7 @@ const NavBar = () => {
           } `}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-[3px] w-6 rounded-sm translate-y-0.5 ${
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-[3px] w-6 rounded-sm ${
             isOpen ? "-rotate-[135deg] -translate-y-[2px]" : "translate-y-0.5"
           } `}
         ></span>
@@ -151,7 +151,12 @@ const NavBar = () => {
         </nav>
       </div>
       {isOpen ? (
-        <div className="min-w-[70vw] flex flex-col z-50 justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-xl backdrop-blur-md py-32 lg:inline-block 3xl:hidden">
+        <motion.div
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ scale: 1, opacity: 100 }}
+          transition={{ duration: 0.5 }}
+          className="min-w-[70vw] flex flex-col z-30 justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-xl backdrop-blur-md py-32 lg:inline-block 3xl:hidden"
+        >
           <nav className="flex items-center flex-col justify-center text-light dark:text-dark">
             <CustomMobileLink href="/" title="Home" toggle={handleClick} />
             <CustomMobileLink
@@ -170,12 +175,13 @@ const NavBar = () => {
               toggle={handleClick}
             />
           </nav>
-          <nav className="flex items-start justify-center gap-4 min-h-[50px] pt-5">
+          <nav className="flex flex-wrap items-start justify-center gap-4 min-h-[50px] pt-5 mx-12">
             <motion.a
               href="https://wa.me/18097298392"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
+              className=""
             >
               <WhatsappIcon className="h-[30px] w-[30px]" />
             </motion.a>
@@ -184,6 +190,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
+              className=""
             >
               <FacebookIcon className="h-[30px] w-[30px]" />
             </motion.a>
@@ -192,6 +199,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
+              className=""
             >
               <LinkedinIcon className="h-[33px] w-[33px] rounded-lg " />
             </motion.a>
@@ -200,15 +208,14 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
+              className=""
             >
               <GithubIcon className="h-[33px] w-[33px] text-center text-light dark:text-dark" />
             </motion.a>
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full visible ${
-                mode === "light"
-                  ? "bg-light text-dark"
-                  : "bg-dark text-light h-[32px] w-[33px]"
+              className={`items-center justify-center rounded-full visible h-[32px] w-[33px] ${
+                mode === "light" ? "bg-light text-dark" : "bg-dark text-light"
               }`}
             >
               {mode !== "dark" ? (
@@ -222,7 +229,7 @@ const NavBar = () => {
               )}
             </button>
           </nav>
-        </div>
+        </motion.div>
       ) : null}
       <div className="absolute left-[50%] -top-1 translate-x-[-50%]">
         <Logo />
