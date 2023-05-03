@@ -141,27 +141,27 @@ const GlitchedDevpoint = () => {
   }, [timeline]);
 
   return (
-    <div className="text-[#000000] block mt-1">
+    <div className="text-[#000000] block mt-[2px] xs:mt-[-2px]">
       <div>
         <Link href="https://devpoint.vercel.app" target={"_blank"} className="">
           <div className="flex absolute items-center justify-center ">
             <div
               ref={(el) => (image_1 = el)}
-              className="font-semibold text-[#e9e970] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#e9e970] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
           </div>
 
           <div className="flex absolute items-center justify-center">
-            <div className="font-semibold text-[#ffffff] text-2xl mix-blend-difference leading-none cursor-default">
+            <div className="font-semibold text-[#ffffff] text-xl mix-blend-difference leading-none cursor-default">
               DevPoint
             </div>
           </div>
           <div className="flex absolute items-center justify-center">
             <div
               ref={(el) => (image_2 = el)}
-              className="font-semibold text-[#01ff01] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#01ff01] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
@@ -169,7 +169,7 @@ const GlitchedDevpoint = () => {
           <div className="flex absolute items-center justify-center">
             <div
               ref={(el) => (image_3 = el)}
-              className="font-semibold text-[#fc1f1f] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#fc1f1f] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
@@ -177,7 +177,7 @@ const GlitchedDevpoint = () => {
           <div className="flex absolute items-center justify-center">
             <div
               ref={(el) => (image_4 = el)}
-              className="font-semibold text-[#8cf7f7] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#8cf7f7] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
@@ -185,7 +185,7 @@ const GlitchedDevpoint = () => {
           <div className="flex absolute items-center justify-center">
             <div
               ref={(el) => (image_5 = el)}
-              className="font-semibold text-[#4254f8] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#4254f8] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
@@ -193,7 +193,7 @@ const GlitchedDevpoint = () => {
           <div className="flex absolute items-center justify-center">
             <div
               ref={(el) => (image_6 = el)}
-              className="font-semibold text-[#ac00ac] text-2xl mix-blend-difference leading-none cursor-default"
+              className="font-semibold text-[#ac00ac] text-xl mix-blend-difference leading-none cursor-default"
             >
               DevPoint
             </div>
