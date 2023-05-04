@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HireMe = () => {
   return (
-    <div className="fixed left-1 bottom-[-50px] lg:bottom-[-30px] flex items-center justify-center overflow-hidden md:-top-36 md:bottom-auto md:right-1 md:left-auto">
+    <div className="fixed left-1 bottom-[-50px] lg:bottom-[0px] flex items-center justify-center overflow-hidden md:-top-36 md:bottom-auto md:right-1 md:left-auto">
       <div className="w-48 h-auto flex items-center justify-center relative md:w-28">
         <CircularText className="fill-dark animate-spin-slow dark:fill-light" />
         <Link

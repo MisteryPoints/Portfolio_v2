@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-light border-t-[1.5px] border-solid border-dark font-medium text-lg fixed bottom-0 py-2 flex items-center justify-between px-28 dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:px-12 xs:text-sm">
+    <footer className="w-full bg-light border-t-[1.5px] border-solid border-dark font-medium text-lg fixed bottom-0 py-2 flex items-center justify-between px-28 dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:px-12 xs:text-sm xxs:hidden">
       <span className="select-none">
         {new Date().getFullYear()} &copy; All Rights Reserved.
       </span>
-      <div className="text-center flex -left-20 relative items-top select-none lg:ml-20 sm:flex-col sm:ml-40 sm:mb-6">
+      <div className="text-center flex -left-20 relative items-top select-none lg:ml-20">
         Build With{" "}
         <motion.p
           whileHover={{ y: [-5, -10, -5, 0] }}

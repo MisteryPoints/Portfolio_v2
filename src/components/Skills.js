@@ -25,7 +25,7 @@ const Skill = ({ name, x, y, color, href }) => {
     <motion.a
       ref={ref}
       href={href}
-      className={`flex items-center justify-center rounded-full font-semibold ${color} text-light py-3 px-6 shadow-gray-500 shadow-sm hover:cursor-pointer absolute border-2 border-solid border-transparent dark:border-light dark:hover:shadow-gray-500 dark:shadow-none`}
+      className={`flex items-center justify-center rounded-full font-semibold ${color} text-light py-3 px-6 shadow-gray-500 shadow-sm hover:cursor-pointer absolute border-2 border-solid border-transparent dark:border-light dark:hover:shadow-gray-500 dark:shadow-none lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:shadow-none xs:text-dark xs:dark:text-light xs:font-bold xs:border-none`}
       whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
       initial={{ x: 0, y: 0 }}
       variants={variants}
@@ -41,12 +41,12 @@ const Skill = ({ name, x, y, color, href }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-56 mb-10 text-center w-full dark:text-light">
+      <h2 className="font-bold text-8xl mt-56 mb-10 text-center w-full dark:text-light md:text-6xl md:mt-32">
         Skills
       </h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark">
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[60vh] sm:h-[55vh] xs:h-[40vh] xxs:h-[30vh] lg:overflow-y-hidden lg:rounded-none lg:overflow-x-hidden lg:bg-circularLightLg dark:lg:bg-circularDarkLg md:bg-circularLightMd dark:md:bg-circularDarkMd sm:bg-circularLightSm dark:sm:bg-circularDarkSm">
         <motion.a
-          className="flex items-center justify-center rounded-full font-semibold bg-sky-900 text-light p-8 shadow-gray-500 shadow-sm hover:cursor-pointer border-2 border-solid border-transparent dark:border-light dark:shadow-light"
+          className="flex items-center justify-center rounded-full font-semibold bg-sky-900 text-light p-8 shadow-gray-500 shadow-sm hover:cursor-pointer border-2 border-solid border-transparent dark:border-light dark:shadow-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
           whileHover={{ scale: 1.1 }}
           href="https://developer.mozilla.org/es/"
           target={"_blank"}

@@ -45,8 +45,8 @@ const about = () => {
             text="Unleashing the boundless potential of technology!"
             className="mb-12 select-none"
           />
-          <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start select-none  ">
+          <div className="grid w-full grid-cols-8 gap-16 md:gap-8">
+            <div className="col-span-3 flex flex-col items-start justify-start select-none xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold text-dark/75 dark:text-light/75">
                 Biography
               </h2>
@@ -67,35 +67,36 @@ const about = () => {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 max-w-[500px] dark:border-light dark:bg-dark">
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 max-w-[500px] dark:border-light dark:bg-dark xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute -top-[2px] -right-3 -z-10 w-[102.5%] h-[103%] rounded-[30px] bg-dark dark:bg-light opacity-[95%]" />
               <ImageFlip />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between select-none dark:text-light">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+
+            <div className="col-span-2 flex flex-col items-end justify-between select-none dark:text-light xl:col-span-8 xl:flex-row md:order-3">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl  sm:text-4xl xs:text-3xl">
                   {" "}
                   <AnimatedNumbers value={40} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-base sm:text-xs">
                   Satisfied Clients
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-4xl xs:text-3xl">
                   {" "}
                   <AnimatedNumbers value={25} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-base sm:text-xs">
                   Projects Completed
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl  sm:text-4xl xs:text-3xl">
                   {" "}
                   <AnimatedNumbers value={7} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-base sm:text-xs">
                   Years of Experience
                 </h2>
               </div>
