@@ -9,8 +9,13 @@ const LiICon = ({ reference }) => {
   });
 
   return (
-    <figure className="absolute lg:-left-9 3xl:left-0 stroke-dark dark:stroke-light">
-      <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
+    <figure className="absolute xs:left-[6px] md:left-2 lg:-left-9 3xl:left-0 stroke-dark dark:stroke-light">
+      <svg
+        className="-rotate-90 md:w-[60%] md:h-[60%] xs:w-[40%] xs:h-[40%]"
+        width="75"
+        height="75"
+        viewBox="0 0 100 100"
+      >
         <circle
           cx="75"
           cy="50"

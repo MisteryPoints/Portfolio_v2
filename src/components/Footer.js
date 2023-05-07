@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-light border-t-[1.5px] border-solid border-dark font-medium text-lg fixed bottom-0 py-2 flex items-center justify-between px-28 dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:px-12 xs:text-sm xxs:hidden">
+    <footer className="w-full bg-light border-t-[1.5px] border-solid border-dark font-medium text-lg fixed bottom-0 py-2 flex items-center justify-between px-28 dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:px-12 md:text-base xs:text-sm xxs:hidden">
       <span className="select-none">
         {new Date().getFullYear()} &copy; All Rights Reserved.
       </span>
