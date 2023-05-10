@@ -33,7 +33,7 @@ const MovingImage = ({ title, img, link }) => {
       onMouseMove={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className="capitalize text-xl font-semibold hover:underline">
+      <h2 className="capitalize text-xl font-semibold hover:underline  sm:text-base">
         {title}
       </h2>
       <FramerImage
@@ -45,7 +45,7 @@ const MovingImage = ({ title, img, link }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-3xl shadow-md shadow-dark dark:shadow-light/20"
+        className="z-10 w-96 h-auto hidden absolute rounded-3xl shadow-md shadow-dark/65 dark:shadow-light/20 sm:!hidden"
       />
     </Link>
   );
@@ -57,10 +57,10 @@ const Article = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 last:mb-0 border border-solid border-dark dark:text-light dark:bg-dark dark:border-light border-r-4 border-b-4"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 last:mb-0 border border-solid border-dark dark:text-light dark:bg-dark dark:border-light border-r-4 border-b-4 sm:flex-col"
     >
       <MovingImage title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4 dark:text-primaryDark">
+      <span className="text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -69,8 +69,8 @@ const Article = ({ img, title, date, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 relative dark:bg-dark dark:border-light dark:text-light">
-      <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-dark dark:bg-light" />
+    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 relative dark:bg-dark dark:border-light dark:text-light xs:rounded-2xl xs:rounded-br-3xl">
+      <div className="absolute -top-[1px] -right-4 -z-10 w-[100.5%] h-[103%] rounded-[35px] rounded-br-[30px] bg-dark dark:bg-light sm:-right-3 sm:-top-[1px] sm:rounded-[30px] sm:rounded-br-[25px]" />
       <Link
         href={link}
         target="_blank"
@@ -91,12 +91,12 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 hover:underline sm:text-base">
           {title}
         </h2>
       </Link>
-      <p className="text-sm mb-2 select-none">{summary}</p>
-      <span className="text-primary font-semibold select-none dark:text-primaryDark">
+      <p className="text-sm mb-2 select-none sm:text-sm">{summary}</p>
+      <span className="text-primary font-semibold select-none dark:text-primaryDark sm:text-sm">
         {time}
       </span>
     </li>
@@ -114,9 +114,9 @@ const articles = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="The Software is Changing the World"
-            className="mb-16"
+            className="lg:!text-5xl sm:!text-4xl xs:!text-3xl mb-16"
           />
-          <ul className="grid grid-cols-2 gap-16 mb-16">
+          <ul className="grid grid-cols-2 gap-16 mb-16 md:grid-cols-1">
             <FeaturedArticle
               time="Feature"
               title="WhatsApp Web Clone"
