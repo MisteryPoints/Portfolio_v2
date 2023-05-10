@@ -155,9 +155,9 @@ const NavBar = () => {
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 100 }}
           transition={{ duration: 0.5 }}
-          className="min-w-[70vw] flex flex-col z-30 justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-xl backdrop-blur-md py-32 lg:inline-block 3xl:hidden"
+          className="min-w-[70vw] flex flex-col z-30 justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-xl backdrop-blur-md py-32 xs:py-12 lg:inline-block 3xl:hidden"
         >
-          <nav className="flex items-center flex-col justify-center text-light dark:text-dark">
+          <nav className="flex items-center flex-col justify-center text-light dark:text-dark z-50">
             <CustomMobileLink href="/" title="Home" toggle={handleClick} />
             <CustomMobileLink
               href="/about"
@@ -231,7 +231,7 @@ const NavBar = () => {
           </nav>
         </motion.div>
       ) : null}
-      <div className="absolute left-[50%] -top-1 translate-x-[-50%]">
+      <div className="absolute left-[50%] -top-1 translate-x-[-50%] xxs:right-0 xxs:translate-x-[0]">
         <Logo />
       </div>
     </header>

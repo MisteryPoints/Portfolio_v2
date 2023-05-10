@@ -36,7 +36,7 @@ const Education = () => {
   });
 
   return (
-    <div className="mt-32 lg:mb-[150px] 3xl:mb-[350px]">
+    <div className="mt-32 lg:mb-[300px] 3xl:mb-[350px]">
       <h2 className="font-bold text-8xl w-full mb-32 text-center dark:text-light md:text-6xl xs:text-4xl md:mb-16">
         Education
       </h2>

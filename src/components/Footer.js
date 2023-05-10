@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Layout from "./Layout";
+import React from "react"; 
 import GlitchedDevpoint from "./GlitchedDevpoint";
 import { motion } from "framer-motion";
 
