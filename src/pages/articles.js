@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import WhatsappClone from "../../public/Projects/Whatsapp-Clone.png";
 import { motion, useMotionValue } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -110,6 +111,7 @@ const articles = () => {
         <title>DevPoint | Articles </title>
         <meta name="about" content="About Page" />
       </Head>
+      <TransitionEffect />
       <main className="w-full pb-32 flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText

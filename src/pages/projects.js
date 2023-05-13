@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import WhatsappClone from "../../public/Projects/Whatsapp-Clone.png";
 import PokeRemix from "../../public/Projects/PokeRemix.png";
 import CryptoQuote from "../../public/Projects/CryptoQuote.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -118,6 +119,7 @@ const projects = () => {
         <title>DevPoint | Projects </title>
         <meta name="about" content="About Page" />
       </Head>
+      <TransitionEffect />
       <main className="w-full pb-24 bg-light flex flex-col items-center justify-center dark:bg-dark">
         <Layout className="pt-16">
           <AnimatedText
