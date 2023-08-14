@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import WhatsappClone from "../../public/Projects/Whatsapp-Clone.png";
+import Krypt from "../../public/Projects/Krypt.png";
 import PokeRemix from "../../public/Projects/PokeRemix.png";
 import CryptoQuote from "../../public/Projects/CryptoQuote.png";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -29,11 +30,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
-          sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw
-          "
+          width={800}
+          height={480}
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between p-12 lg:w-full lg:px-8 lg:pt-6">
@@ -151,7 +149,7 @@ const projects = () => {
               <Project
                 type="Feature"
                 title="Pokedex App"
-                summary="A Gmail Auth Messenger, semi Whatsapp Clone, using React, TailwindCSS, Firebase, Gmail Auth and Styled Components, It allows you to chat with your prefered customers or friends!"
+                summary="An application to look at your favorite pokemons, their type, number of pokedex with sprite and 3d images. "
                 img={PokeRemix}
                 link="https://pokeremix.vercel.app/"
                 github="https://github.com/MisteryPoints/PokeRemix"
@@ -166,7 +164,7 @@ const projects = () => {
               <Project
                 type="Feature"
                 title="Crypto Screener App"
-                summary="A Gmail Auth Messenger, semi Whatsapp Clone, using React, TailwindCSS, Firebase, Gmail Auth and Styled Components, It allows you to chat with your prefered customers or friends!"
+                summary="An application to validate the prices and changes of your favorite cryptocurrencies."
                 img={CryptoQuote}
                 link="https://cryptoquote.vercel.app/"
                 github="https://github.com/MisteryPoints/CryptoQuote"
@@ -181,11 +179,11 @@ const projects = () => {
             >
               <FeaturedProject
                 type="Feature"
-                title="WhatsApp Web Clone"
-                summary="A Gmail Auth Messenger, semi Whatsapp Clone, using React, TailwindCSS, Firebase, Gmail Auth and Styled Components, It allows you to chat with your prefered customers or friends!"
-                img={WhatsappClone}
-                link="https://devpoint-messenger.vercel.app/"
-                github="https://github.com/MisteryPoints/WhatsappClone"
+                title="Krypt Exchange"
+                summary="An Exchange type application that allows you to connect your Metamask account to exchange your money for Ethereum, being a Web 3.0 connected to the Ethereum blockchain."
+                img={Krypt}
+                link="https://krypt-devpoint.vercel.app/"
+                github="https://github.com/MisteryPoints/Web3"
               />
             </motion.div>
             <motion.div
