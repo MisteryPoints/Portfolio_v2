@@ -1,10 +1,10 @@
+"use client";
+import React from "react";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import DevIcon from "../../public/DevIcon.png";
+import { motion } from "framer-motion";
+import DevIcon from "../public/DevIcon.png";
 
-const MotionLink = motion(Link);
 const FramerImage = motion(Image);
 
 const Logo = () => {

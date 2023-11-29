@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import { Power4, Sine, gsap } from "gsap";
 import Link from "next/link";
 

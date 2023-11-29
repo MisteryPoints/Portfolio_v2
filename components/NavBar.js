@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { useRouter } from "next/router";
 import {
   LinkedinIcon,
   GithubIcon,
@@ -11,8 +13,7 @@ import {
   FacebookIcon,
   InstagramIcon,
 } from "./Icons";
-import { motion } from "framer-motion";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import useThemeSwitcher from "../hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const { asPath } = useRouter();

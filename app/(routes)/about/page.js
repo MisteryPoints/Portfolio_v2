@@ -1,45 +1,22 @@
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import React, { useEffect, useRef } from "react";
-import ImageFlip from "@/components/ImageFlip";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import TransitionEffect from "@/components/TransitionEffect";
+import React from "react";
+import AnimatedNumbers from "../../../components/AnimatedNumbers";
+import AnimatedText from "../../../components/AnimatedText";
+import Layout from "../../../components/Layout";
+import ImageFlip from "../../../components/ImageFlip";
+import Skills from "../../../components/Skills";
+import Experience from "../../../components/Experience";
+import Education from "../../../components/Education";
+import TransitionEffect from "../../../components/TransitionEffect";
 
-const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
-
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3500 });
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [motionValue, isInView, value]);
-
-  useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
-
-  return <span ref={ref}></span>;
+export const metadata = {
+  title: "DevPoint | Articles",
+  description: "Welcome to my Personal Portfolio!",
+  icons: "/DevIcon.png",
 };
 
 const about = () => {
   return (
     <>
-      <Head>
-        <title>DevPoint | About </title>
-        <meta name="about" content="About Page" />
-      </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pb-20">
