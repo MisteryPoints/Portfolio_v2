@@ -9,7 +9,7 @@ const HireMe = () => {
         <CircularText className="fill-dark animate-spin-slow dark:fill-light" />
         <Link
           href="mailto:misterypoint2@gmail.com"
-          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-white shadow-md border border-solid border-dark w-24 h-24 rounded-full font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-white dark:hover:border-light transition-all duration-300 md:w-[4.5rem] md:h-[4.5rem] md:text-sm"
+          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-white shadow-md border border-solid border-dark w-28 h-28 rounded-full text-lg font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-white dark:hover:border-light transition-all duration-300 md:w-[5rem] md:h-[5rem] md:text-sm"
         >
           Hire Me!
         </Link>
